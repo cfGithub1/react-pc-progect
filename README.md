@@ -36,3 +36,21 @@ https://echarts.apache.org/handbook/zh/get-started
 | router | 路由Router |
 | store | Redux状态 |
 | utils | 工具函数 |
+
+# 快照1 登录页面
+## 主要内容
+登录界面静态页面与动态功能
+
+## 操作
+1. 登录界面静态页面搭建
+2. 登录表单验证
+规则：失去焦点校验，非空校验，手机号格式校验
+3. 封装request工具模块
+src\utils\request.js
+4. 在store中创建存放token的配置
+5. dispatch请求登录
+6. 登录成功后跳转到layout页面
+7. token本地持久化
+8. 在Axios请求拦截器中注入token
+9. 用token控制路由权限
+src\components\AuthRoute.js
