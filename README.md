@@ -54,3 +54,18 @@ src\utils\request.js
 8. 在Axios请求拦截器中注入token
 9. 用token控制路由权限
 src\components\AuthRoute.js
+
+# 快照2 布局页面
+## 主要内容
+布局页面静态页面与动态功能
+
+## 操作
+1. 布局页面静态页面搭建
+2. 引入样式重置 `npm i normalize.css`
+3. 二级路由配置
+4. 左侧tab切换改变二级路由
+5. 路由变化改变左侧tab选中状态
+6. 渲染用户name
+7. 退出登录,清除用户信息,跳转登录页
+8. 处理Token失效（401）
+9. 将接口封装在apis目录下
