@@ -16,22 +16,16 @@ import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.snow.css'
 import './index.scss'
 
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { getChannelApi, createArticleApi } from '@/apis/article'
 import { useNavigate } from 'react-router-dom'
+import { useChannel } from '@/hooks/useChannel'
 
 const { Option } = Select
 
 const Publish = () => {
     // 频道列表
-    const [channelList, getChannelList] = useState([])
-    useEffect(() => {
-        const getChannel = async () => {
-            const res = await getChannelApi()
-            getChannelList(res.data.channels)
-        }
-        getChannel()
-    }, [])
+    const { channelList } = useChannel()
 
     // 切换图片封面类型
     const [imageType, setImageType] = useState(0)
@@ -48,7 +42,7 @@ const Publish = () => {
     }
 
     // 表单提交
-    const  navigate = useNavigate()
+    const navigate = useNavigate()
     const onFinish = async (values) => {
         console.log(values)
 

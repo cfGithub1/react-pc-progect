@@ -16,3 +16,20 @@ export function createArticleApi(data) {
         data
     })
 }
+
+// 获取文章列表
+export function getArticleListApi(params) {
+    return request({
+        url: '/mp/articles',
+        method: 'get',
+        params
+    })
+}
+
+// 删除文章
+export function delArticleApi(target) {
+    return request({
+        url: `/mp/articles/${target}`,
+        method: 'delete',
+    })
+}
