@@ -33,3 +33,20 @@ export function delArticleApi(target) {
         method: 'delete',
     })
 }
+
+// 获取文章详情
+export function getArticleApi(target) {
+    return request({
+        url: `/mp/articles/${target}`,
+        method: 'get',
+    })
+}
+
+// 编辑文章
+export function editArticleApi(data) {
+    return request({
+        url: `/mp/articles/${data.id}?draft=false`,
+        method: 'put',
+        data
+    })
+}
