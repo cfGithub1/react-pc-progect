@@ -103,3 +103,7 @@ src\components\AuthRoute.js
 3. 回显图片
 4. 实现编辑功能
 5. 动态区分新增与编辑
+
+# 快照5 首页
+## 主要内容
+用echarts图表丰富首页
